@@ -90,24 +90,24 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="info-section">
-                                <p><strong>Customer ID:</strong> {selectedUser.customerId}</p>
-                                <p><strong>Email:</strong> {selectedUser.email}</p>
-                                <p><strong>Phone:</strong> {selectedUser.phone}</p>
+                                <p>Customer ID: <strong>{selectedUser.customerId}</strong></p>
+                                <p>Email: <strong>{selectedUser.email}</strong></p>
+                                <p>Phone: <strong>{selectedUser.phone}</strong></p>
                                 <button className="add-button" onClick={toggleForm}><FaPlus /> Add</button>
-                                {showForm && <div className="form">/* Add your form component here */</div>}
+                                {showForm && <div className="form"></div>}
                             </div>
                             <div className="info-section">
-                                <p>Loyalty Tier: {selectedUser.loyaltyTier}</p>
-                                <p>Segment: {selectedUser.segment}</p>
-                                <button className="add-button" onClick={toggleForm}><FaPlus /> Add</button>
-                            </div>
-                            <div className="info-section">
-                                <p>Lifetime Value: ${selectedUser.lifetimeValue}</p>
-                                <p>Propensity to Purchase: <FaChartPie size={24} color="orange"/> {selectedUser.propensityToPurchase}</p>
+                                <p>Loyalty Tier: <strong>{selectedUser.loyaltyTier}</strong></p>
+                                <p>Segment: <strong>{selectedUser.segment}</strong></p>
                                 <button className="add-button" onClick={toggleForm}><FaPlus /> Add</button>
                             </div>
                             <div className="info-section">
-                                <p>Engagement Score: <FaChartPie size={24} color="green" /> {selectedUser.engagementScore}</p>
+                                <p>Lifetime Value: <strong>{selectedUser.lifetimeValue}</strong></p>
+                                <p>Propensity to Purchase: <strong><FaChartPie size={24} color="orange"/> {selectedUser.propensityToPurchase}</strong></p>
+                                <button className="add-button" onClick={toggleForm}><FaPlus /> Add</button>
+                            </div>
+                            <div className="info-section">
+                                <p>Engagement Score: <strong><FaChartPie size={24} color="green" /> {selectedUser.engagementScore}</strong></p>
                                 <button className="add-button" onClick={toggleForm}><FaPlus /> Add</button>
                             </div>
                         </div>
