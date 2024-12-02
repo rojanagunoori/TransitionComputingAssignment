@@ -1,0 +1,124 @@
+.sidebar{
+    background-color: #0D1424;
+    max-width: 250px;
+    height: 100vh;
+    padding: 15px;
+    position: fixed;
+    transition: width 0.3s ease;
+    top: 60;
+   
+ display: flex;
+ flex-direction: column;
+    overflow:visible;
+    z-index: 900;
+    scrollbar-width: none;
+    
+}
+.sidebar-content{
+    flex-grow: 1;
+  overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.sidebar.collapsed{
+    transition: all 0.3s ease-in-out;
+    width: 80px;
+}
+.sidebar ul{
+    list-style: none;
+    padding: 0;
+}
+.sidebar li{
+    margin:15px 0;
+}
+
+  
+.sidebar button{
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+.sidebar .button-flex{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  
+}
+.sidebar button:focus{
+    outline: none;
+}
+.sidebar a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+ gap: 10px;
+ transition: background-color 0.3s ease,color0.3s ease;
+    
+}
+.sidebar  span{
+    background-color: transparent;
+}
+.sidebar .active span{
+    color: blue;
+}
+.sidebar a.active{
+    color: #fff;
+    background-color: #1e3751;
+    border-radius: 0 20px 20px 0;
+    padding-right: 20px;
+    
+}
+.sidebar a:hover{
+    background-color: #263047;
+    color: #fff;
+}
+.sidebar a:hover .icon{
+    
+}
+
+.sidebar .submenu{
+    overflow: hidden;
+
+    transition: max-height 0.3s ease-in-out;
+    margin-left: 10px;
+    padding-left: px;
+    border-left: 2px solid #eaf1e1;
+}
+.sidebar .submenu li{
+    margin: 2px;
+}
+.toggle-sidebar-btn{
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+    background-color: #007bff !important;
+    width: 30px !important;
+    height: 30px;
+    
+    border-radius: 50%;
+    position: absolute;
+    top: 40%;
+   
+    transform: translateY(-50%);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    right: -18px;
+    z-index: 1000; 
+    display: flex;
+   align-items: center;
+    justify-content: center;   
+}
